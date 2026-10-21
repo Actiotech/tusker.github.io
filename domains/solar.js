@@ -1,0 +1,75 @@
+// Solar: a rooftop solar installer's enquiry desk.
+(window.TUSKER_DOMAINS = window.TUSKER_DOMAINS || {}).solar = {
+  story: {
+    eyebrow: 'An enquiry, run from WhatsApp',
+    title: 'From the first call to the roof, on one record.',
+    note: "Demo: a rooftop solar installer's enquiry desk.",
+    phone: "Divya's phone · Coordinator",
+    board: {
+      title: 'Enquiry board',
+      flow: 'Enquiry workflow',
+      card: 'SOL-118 · 5 kW rooftop',
+      client: 'Suresh · Website',
+      stages: ['New', 'Contacted', 'Site Visit', 'Quote Sent', 'Installed'],
+      empty: 'Not logged yet',
+    },
+    scenes: [
+      {
+        title: 'Logged in a few replies',
+        body: 'Divya logs a website lead by voice note. Tusker asks for the monthly bill, so the quote starts from the right size.',
+        chat: [
+          ['day', 'Monday'],
+          ['me', '🎙 0:04', '10:12'],
+          ['bot', 'Summary?', '10:12'],
+          ['me', '5 kW rooftop - Suresh', '10:13'],
+          ['bot', 'Customer Number?', '10:13'],
+          ['me', '90000 67890', '10:13'],
+          ['bot', 'Monthly electricity bill?', '10:13'],
+          ['me', 'About ₹4,500', '10:14'],
+          ['bot', 'Create enquiry?\n• Summary: 5 kW rooftop - Suresh\n• Customer Number: +919000067890\n• Monthly Bill: ₹4,500\n• Source: Website', '10:14', 'Create · Cancel'],
+          ['me', 'Create', '10:15'],
+          ['bot', 'Task SOL-118 created.', '10:15'],
+          ['stage', 'New'],
+        ],
+      },
+      {
+        title: 'No site visit yet? Just ask.',
+        body: 'The owner asks which leads still need a site visit and gets the list, without phoning the desk.',
+        chat: [
+          ['day', 'Monday, 6 pm'],
+          ['who', "Joseph's phone · Owner"],
+          ['me', '🎙 0:03', '18:02'],
+          ['bot', 'These enquiries have no site visit yet:\n1. SOL-118 - 5 kW rooftop - Suresh\n2. SOL-115 - 3 kW rooftop - Fathima', '18:02'],
+        ],
+      },
+      {
+        title: 'Each call and visit moves it on',
+        body: 'Arjun moves the lead on by voice after the call, then saves his roof notes from the site. One tap on Confirm each.',
+        chat: [
+          ['day', 'Tuesday'],
+          ['who', "Arjun's phone · Site engineer"],
+          ['me', '🎙 0:04', '09:45'],
+          ['bot', 'Change SOL-118 from new to contacted?', '09:45', 'Confirm · Cancel'],
+          ['me', 'Confirm', '09:45'],
+          ['stage', 'Contacted'],
+          ['day', 'Wednesday'],
+          ['me', '🎙 0:11', '15:30'],
+          ['bot', 'Add this note to SOL-118: "South-facing RCC roof, no shade. 5 kW fits. Needs a 3-phase meter."?', '15:30', 'Confirm · Cancel'],
+          ['me', 'Confirm', '15:31'],
+          ['stage', 'Site Visit'],
+        ],
+      },
+      {
+        title: 'The owner hears what matters',
+        body: "One message when the site visit is done. Arjun's roof notes are a question away.",
+        chat: [
+          ['who', "Joseph's phone · Owner"],
+          ['notify', 'Joseph'],
+          ['bot', 'Update on a task you watch:\nTask: SOL-118 — 5 kW rooftop - Suresh\nUpdated by: Arjun\nChange: Site visit done. Quote is next.\n- Tusker', '15:32'],
+          ['me', '🎙 0:03', '19:05'],
+          ['bot', 'Comments on SOL-118:\n\nArjun (4 hours ago): South-facing RCC roof, no shade. 5 kW fits. Needs a 3-phase meter.', '19:05'],
+        ],
+      },
+    ],
+  },
+};

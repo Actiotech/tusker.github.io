@@ -1,484 +1,149 @@
-<!DOCTYPE html>
-<html lang="en-in"><head>
-  <meta charset="utf-8">
-  <title>Tusker | WhatsApp Task &amp; Workflow Automation for SMEs</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tusker: enquiry and lead tracking in WhatsApp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Chettan+2:wght@500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Free managers from routine follow-ups. Assign tasks, automate WhatsApp reminders, configure workflows and approvals, track SLAs and review business performance with Tusker.">
-  
-  <meta name="author" content="Tusker">
-  <meta name="generator" content="Hugo 0.154.5">
-
-  <!-- theme meta -->
-  <meta name="theme-name" content="gosaas-hugo" />
-
-  <!-- plugins -->
-  
-  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
-  
-  <link rel="stylesheet" href="/plugins/slick/slick.css ">
-  
-  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
-  
-
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="/scss/style.min.css" integrity="" media="screen">
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="/images/logo.svg " type="image/svg+xml">
-  <link rel="icon" href="/images/logo.svg " type="image/svg+xml">
-
-</head><body><!-- navigation -->
-<header class="fixed-top navigation">
-  <div class="container">
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-      <a class="navbar-brand"href="/"><img class="img-fluid" src="/images/logo.svg" alt="Tusker | WhatsApp Task &amp; Workflow Automation for SMEs"></a>
-      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="ti-align-right h4"></i>
-      </button>
-
-      <div class="collapse navbar-collapse text-center" id="navigation">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/"> Home </a>
-          </li>
-          
-            
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/#features">Features</a>
-            </li>
-            
-            
-          
-            
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/#use-cases">Use Cases</a>
-            </li>
-            
-            
-          
-            
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/#our-story">Our Story</a>
-            </li>
-            
-            
-          
-            
-            
-            <li class="nav-item">
-              <a class="nav-link" href="/#contact">Contact</a>
-            </li>
-            
-            
-          
-        </ul>
-
-        
-        <a href="https://tusker.app/" class="btn btn-outline-primary btn-sm ml-lg-3" target="_blank" rel="noopener">Login</a>
-
-        
-        <!-- get start btn -->
-        <a href="/#contact" class="btn btn-primary btn-sm ml-lg-2">Book a Demo</a>
-        
-      </div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#">tusker<b>.</b></a>
+    <nav aria-label="Main">
+      <a class="nav-link" href="#story" data-i18n="nav.story">See it run</a>
+      <a class="nav-link" href="#faq" data-i18n="nav.faq">Questions</a>
+      <a class="pill" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="nav.start">Start on WhatsApp</a>
+      <details class="menu">
+        <summary aria-label="Menu" data-i18n-label="menu"><span></span></summary>
+        <div class="menu-panel">
+          <a href="#story" data-i18n="nav.story">See it run</a>
+          <a href="#faq" data-i18n="nav.faq">Questions</a>
+        </div>
+      </details>
     </nav>
   </div>
 </header>
-<!-- /navigation -->
 
-
-
-
-
-<section class="position-relative banner" id="home">
-  <img src="/images/backgrounds/banner-bg.png" alt="" class="bg-image-bottom">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 text-center text-lg-left mb-5 mb-lg-0">
-        <p class="eyebrow">WHATSAPP WORKFLOW AUTOMATION FOR SMEs</p>
-        <h1 class="title">Less follow-up. <strong>More time to lead.</strong></h1>
-        <p>Assign tasks. Automate follow-ups on WhatsApp. Give managers more time to focus on customers, decisions and growing the business.</p>
-        <div class="banner-buttons">
-          
-          
-          <a href="#contact" class="btn btn-primary mr-3 mb-3">Book a Demo</a>
-          
-          
-          
-          
-          <a href="https://wa.me/919446014972?text=Hi%2C%20I%27d%20like%20a%20Tusker%20demo%20for%20my%20business." class="btn btn-outline-primary mb-3" target="_blank" rel="noopener">
-            <svg class="whatsapp-icon mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp
-          </a>
-          
-          
-        </div>
-      </div>
-      <div class="col-lg-6 text-center text-lg-left">
-        <img class="img-fluid product-shot" src="/images/product/order-board.png" alt="Tusker order board showing assigned work across booked, confirmed, invoiced and paid stages">
-      </div>
+<main id="main">
+  <section class="hero">
+    <svg class="tusker-bg" viewBox="44 56 332 378" fill="none" stroke="#5E5850" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true">
+      <g class="facets" stroke-width="0.6" opacity=".45"><path pathLength="1" d="M258 94L240 186" style="animation-delay:700ms"/><path pathLength="1" d="M214 74L172 262" style="animation-delay:790ms"/><path pathLength="1" d="M126 164L214 74" style="animation-delay:880ms"/><path pathLength="1" d="M126 164L172 262" style="animation-delay:970ms"/><path pathLength="1" d="M118 242L172 262" style="animation-delay:1060ms"/><path pathLength="1" d="M150 300L110 318" style="animation-delay:1150ms"/><path pathLength="1" d="M138 360L108 380" style="animation-delay:1240ms"/><path pathLength="1" d="M232 108L276 262" style="animation-delay:1330ms"/></g>
+      <g stroke-width="0.9">
+        <path pathLength="1" d="M170 92L214 74L258 94L302 98L362 146L356 224L318 268L276 262L204 266L172 262L150 300L138 360L142 396L160 404L150 420L122 414L108 380L110 318L118 242L126 164L146 116Z"/>
+        <path pathLength="1" d="M232 108L302 98L362 146L356 224L318 268L276 262L260 222L240 186Z" style="animation-delay:400ms"/>
+      </g>
+      <path class="eye" d="M150 174L159 169L168 174L159 179Z" fill="#5E5850" stroke="none"/>
+      <path class="tusk" d="M176 255L180 262L132 298L86 298L56 274L88 293L130 293Z" fill="#f84525" fill-opacity=".75" stroke="none"/>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Sales and lead tracking</p>
+      <h1 data-i18n="hero.title">Know where every enquiry stands, in WhatsApp.</h1>
+      <p class="lead" data-i18n="hero.lead">Your team logs each enquiry and moves it on from the WhatsApp they already use. You see where every one stands without a phone call.</p>
+      <a class="cta" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="cta">Set up on WhatsApp</a><a class="link" href="#story" data-i18n="hero.watch">Watch an enquiry run</a>
+      <div class="langs" aria-label="Voice note languages" data-i18n-label="langs"><span>English</span><span lang="ml">മലയാളം</span><span>हिन्दी</span><span>தமிழ்</span><span>తెలుగు</span><span>ಕನ್ನಡ</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-
-
-
-
-<section class="section pb-0" id="problem">
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center mb-5">
-        <h2 class="title">How much of your day goes into <strong>following up?</strong></h2>
-        <p class="lead">Give routine follow-ups a process, and give managers their time back.</p>
-      </div>
-      
-      
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card text-center h-100">
-          <div class="card-body p-lg-5 px-3 py-4">
-            <i class="icon ti-comments bg-primary mb-4"></i>
-            <h3 class="card-title mb-3 h4">Chasing task updates</h3>
-            <p class="card-text">Repeated messages and calls take managers away from customers, planning and decisions.</p>
+  <section class="story" id="story">
+    <div class="wrap">
+      <!-- Filled in by story.js from the domain picked with ?d= (web/domains/). -->
+      <p class="eyebrow" id="storyEyebrow"></p>
+      <h2 id="storyTitle"></h2>
+      <p class="note" id="storyNote"></p>
+      <div class="story-grid">
+        <div class="scenes"></div>
+        <div class="phone-col">
+          <div class="phone"><div class="screen">
+            <div class="wa-head"><div class="avatar">T</div><div>Tusker<small id="whoLabel"></small></div></div>
+            <div class="chat" id="chat" aria-live="polite"></div>
+          </div></div>
+          <div class="board">
+            <b id="boardTitle"></b><span class="sep"> · </span><span id="boardCard"></span>
+            <ol class="steps" id="steps" aria-label="Enquiry stages"></ol>
+            <div class="stage-now" id="stageName" aria-live="polite"></div>
           </div>
-        </div>
-      </div>
-      
-      
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card text-center h-100">
-          <div class="card-body p-lg-5 px-3 py-4">
-            <i class="icon ti-check-box bg-primary mb-4"></i>
-            <h3 class="card-title mb-3 h4">Waiting for approvals</h3>
-            <p class="card-text">Work slows down when the next step, responsible person or approval is unclear.</p>
-          </div>
-        </div>
-      </div>
-      
-      
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card text-center h-100">
-          <div class="card-body p-lg-5 px-3 py-4">
-            <i class="icon ti-bar-chart bg-primary mb-4"></i>
-            <h3 class="card-title mb-3 h4">Piecing together reports</h3>
-            <p class="card-text">Scattered updates make it harder to spot delays, track SLAs and understand team performance.</p>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  
-</section>
-
-
-
-
-
-
-<section class="section" id="solution">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-left">
-        <h2 class="title">Keep work moving through <strong>WhatsApp.</strong></h2>
-        <p>Your team is already comfortable with WhatsApp. Tusker uses that familiar channel for task reminders and updates, making it easier to adopt a structured way of working. Managers get visibility into progress without personally chasing every update.</p>
-        
-        
-        <a href="#how-it-works" class="btn btn-primary">See How It Works</a>
-        
-        
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 text-center">
-        <img class="img-fluid product-shot" src="/images/about-app/app-screen-2.png" alt="Illustration of Tusker&#39;s WhatsApp task communication" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section class="section bg-gray" id="how-it-works">
-  <div class="container">
-    <div class="section-heading text-center"><p class="eyebrow">FROM ASSIGNMENT TO VISIBILITY</p><h2 class="title">A clear process. <strong>Less chasing.</strong></h2></div>
-    <div class="row">
-      <div class="col-md-4 mb-4"><div class="process-step"><span class="step-number">01</span><h3>Configure & assign</h3><p>Set your workflow stages and approvals, then assign tasks to the right people. Configure it yourself or with our consultants.</p></div></div>
-      <div class="col-md-4 mb-4"><div class="process-step"><span class="step-number">02</span><h3>Automate follow-ups</h3><p>Keep tasks moving with WhatsApp reminders and updates, using a channel your team is already comfortable with.</p></div></div>
-      <div class="col-md-4 mb-4"><div class="process-step"><span class="step-number">03</span><h3>Track & improve</h3><p>Monitor progress and SLAs. Review reports to understand delays, team performance and business trends.</p></div></div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="features">
-
-
-<div class="section ">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-left">
-        <h2 class="title">Your process. <strong>Your workflow.</strong></h2>
-        <p>Configure your business processes, approval rules and workflow stages in Tusker. Set it up yourself or work with our expert consultants to turn your everyday process into a workflow your team can follow.</p>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-        <img class="img-fluid product-shot" src="/images/product/workflow.png" alt="Tusker workflow configuration with process stages and transitions" loading="lazy">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section bg-gray">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-2 text-center text-lg-left">
-        <h2 class="title">Assign work. <strong>Automate the follow-up.</strong></h2>
-        <p>Give each task an owner and track it through your process. Let WhatsApp automation handle routine follow-ups while managers track SLAs and focus their attention on work that needs a decision.</p>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-1 text-center mb-4 mb-lg-0">
-        <img class="img-fluid product-shot" src="/images/product/order-board.png" alt="Tusker task board showing orders grouped by status and assigned salesperson" loading="lazy">
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="section ">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-left">
-        <h2 class="title">See progress. <strong>Understand performance.</strong></h2>
-        <p>Track SLAs, review historical performance and turn operational data into useful reports. Compare sales month-on-month and year-on-year, understand which SKUs sell where, and break results down by region and salesperson.</p>
-      </div>
-      <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
-        <img class="img-fluid product-shot" src="/images/product/monthly-sales.png" alt="Tusker sales reporting dashboard with monthly performance trends" loading="lazy">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</section>
-
-
-
-
-<section class="section bg-gray" id="use-cases">
-  <div class="container">
-    <div class="section-heading text-center"><p class="eyebrow">BUILT AROUND YOUR BUSINESS</p><h2 class="title">Start with the work <strong>you manage every day.</strong></h2><p>Configure Tusker around the processes that matter to your business.</p></div>
-    <div class="row">
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-id-badge" aria-hidden="true"></i><h3>Customer &amp; client database</h3><p>Keep customer and client information organised so your team has a shared reference for everyday work.</p></article></div>
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-truck" aria-hidden="true"></i><h3>Distributor tracking</h3><p>Track distributor activity and related work through a clear, repeatable process.</p></article></div>
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-clipboard" aria-hidden="true"></i><h3>Project tracking</h3><p>Assign project tasks, monitor progress and follow up on work across your team.</p></article></div>
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-bar-chart" aria-hidden="true"></i><h3>Sales team performance</h3><p>Review salesperson performance and regional results to see where managers should focus.</p></article></div>
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-stats-up" aria-hidden="true"></i><h3>Sales trends &amp; history</h3><p>Compare historical performance with month-on-month and year-on-year sales reports.</p></article></div>
-      
-      <div class="col-lg-4 col-md-6 mb-4"><article class="use-case-card h-100"><i class="ti-package" aria-hidden="true"></i><h3>Product &amp; SKU performance</h3><p>See which products sell where, with SKU-level results and regional breakdowns.</p></article></div>
-      
-    </div>
-    <div class="text-center mt-3"><a class="btn btn-primary" href="#contact">Explore Your Use Case</a></div>
-  </div>
-</section>
-
-
-<section class="section" id="faq">
-  <div class="container"><div class="row"><div class="col-lg-8 mx-auto">
-    <h2 class="title text-center mb-5">A few things <strong>you may be wondering.</strong></h2>
-    
-    <details class="faq-item"><summary>How does Tusker work with WhatsApp?</summary><p>Managers configure and track work in Tusker. WhatsApp automation supports task reminders and follow-ups, so teams can receive updates through a channel they already use.</p></details>
-    
-    <details class="faq-item"><summary>Can we configure our own processes?</summary><p>Yes. Configure processes, approval rules and workflows yourself, or get help from our expert consultants.</p></details>
-    
-    <details class="faq-item"><summary>What can managers track?</summary><p>Track tasks, workflow progress and SLAs, then use dashboards and reports to review historical performance, sales trends, products, regions and salespeople.</p></details>
-    
-    <details class="faq-item"><summary>Where should we start?</summary><p>Bring one real process to your demo, such as distributor tracking, project follow-ups or sales team reporting. We can discuss how to configure it for your business.</p></details>
-    
-  </div></div></div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<section class="section bg-gray" id="our-story">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <h2 class="title mb-4">Our <strong>Story</strong></h2>
-        <p>Managers should have time to lead their business, not spend the day asking for updates.</p>
-<p><strong>That&rsquo;s the idea behind Tusker.</strong> We bring structure to everyday business processes and connect them with WhatsApp, a channel teams already know and use.</p>
-<p>Built by ACTIOTECH for growing SMEs, Tusker combines configurable workflows, approvals and reporting with expert help when you need it. Start with one process and build from there.</p>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-<section class="position-relative pb-5">
-  <img src="/images/backgrounds/footer-bg.png" alt="" class="bg-image-bottom">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-7 mx-auto text-center">
-        <h3 class="title">Make time for <strong>the work that matters.</strong></h3>
-        <div class="cta-buttons">
-          
-          
-          <a href="#contact" class="btn btn-primary mr-3 mb-3">Book a Demo</a>
-          
-          
-          <a href="https://wa.me/919446014972?text=Hi%2C&#43;I&#43;would&#43;like&#43;a&#43;Tusker&#43;demo&#43;for&#43;my&#43;business." class="btn btn-outline-primary mb-3" target="_blank" rel="noopener">
-            <svg class="whatsapp-icon mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Chat on WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section class="section pb-0 position-relative" id="contact">
-  
-  <img src="/images/backgrounds/contact-bg.png" alt="" class="bg-image-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 mx-auto text-center">
-        <h2 class="title">Bring one process. <strong>See Tusker in action.</strong></h2>
-        
-        <p class="mb-4">Show us where your team spends time following up. Let&rsquo;s explore a workflow for your business.</p>
-        
-        <form action="https://formspree.io/f/mlggqwzd" method="POST">
-          <input type="text" name="name" id="name" aria-label="Your name" class="form-control mb-4" placeholder="Your name" required>
-          <input type="text" name="company" id="company" aria-label="Company name" class="form-control mb-4" placeholder="Company name">
-          <input type="tel" name="phone" id="phone" aria-label="Phone number" class="form-control mb-4" placeholder="Phone number" required>
-          <input type="email" name="email" id="email" aria-label="Email address" class="form-control mb-4" placeholder="Email address">
-          <textarea name="message" id="message" aria-label="Which process would you like to automate?" class="form-control mb-4" placeholder="Which process would you like to automate?" rows="3"></textarea>
-          <button type="submit" class="btn btn-primary btn-block mb-4">Book a Demo</button>
-        </form>
-        
-        <div class="text-center mt-4">
-          <p class="text-muted mb-2">Or chat with us on WhatsApp</p>
-          <a href="https://wa.me/919446014972?text=Hi%2C%20I%27d%20like%20a%20Tusker%20demo%20for%20my%20business." class="btn btn-outline-secondary" target="_blank" rel="noopener">
-            <svg class="whatsapp-icon mr-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp Us
-          </a>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-</section>
-
-
-
-
-
-
-
-
-<footer class="position-relative">
-  <img src="/images/backgrounds/footer-bg.png" alt="" class="img-fluid bg-image-bottom">
-  <div class="container">
-    <div class="row mb-100">
-      <div class="col-lg-4 pr-lg-5 col-md-6 mb-5 mb-lg-0">
-        <a class="mb-4 d-block" href="/"><img src="/images/logo.svg" alt="Tusker | WhatsApp Task &amp; Workflow Automation for SMEs"></a>
-        <p>Tusker helps SME managers assign tasks, automate WhatsApp follow-ups and track business performance. Built by ACTIOTECH.</p>
-      </div>
-      <div class="col-lg-2 col-md-3 col-6 mb-5 mb-lg-0">
-        <h6 class="mb-4">Quick Links</h6>
-        <ul class="list-unstyled footer-menu">
-          
-          <li><a href="/#features">Features</a></li>
-          
-          <li><a href="/#use-cases">Use Cases</a></li>
-          
-          <li><a href="/#our-story">Our Story</a></li>
-          
-          <li><a href="/#contact">Contact</a></li>
-          
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-3 col-6 mb-5 mb-lg-0">
-        <h6 class="mb-4">Social Contacts</h6>
-        <ul class="list-unstyled footer-menu">
-          
-          <li><a href="https://wa.me/919446014972?text=hi">WhatsApp</a></li>
-          
-        </ul>
-      </div>
-      <div class="col-lg-4">
-        <h6 class="mb-4">Stay in the Loop</h6>
-        <form id="subscription-form" action="https://formspree.io/f/mlggqwzd" method="POST">
-          <div class="input-group mb-3">
-            <input type="email" name="email" id="subscription-email" aria-label="Email for Tusker updates" class="subscription-form flex-fill" placeholder="Your Email Address" required>
-            <div class="input-group-append">
-              <button type="submit" aria-label="Subscribe to Tusker updates" class="input-group-text btn btn-primary rounded-0"><img class="img-fluid" src="/images/arrow.svg" alt=""></button>
+          <div class="flow" aria-hidden="true">
+            <p class="flow-title" id="flowTitle"></p>
+            <div class="flow-track">
+              <ol id="flowStages"></ol>
+              <div class="flow-card" id="flowCard">
+                <b id="flowCardTitle"></b>
+                <span id="flowClient"></span>
+                <p><i>🎙 <u id="flowVoice">0</u></i><i>🔔 <u id="flowBell">0</u></i></p>
+              </div>
             </div>
+            <p class="flow-title">Notified</p>
+            <ul class="flow-notified" id="flowNotified"></ul>
           </div>
-          <input type="hidden" name="_subject" value="New Newsletter Subscription">
-          <div id="subscription-feedback" class="mb-3" style="display: none;"></div>
-        </form>
-        <ul class="list-inline">
-          
-        </ul>
+        </div>
       </div>
     </div>
-    <div class="position-relative zindex-1 text-center pb-5">| @2026 Tusker. All Rights Reserved |</div>
-  </div>
-</footer>
+  </section>
 
+  <section class="paper takeaway" aria-labelledby="take-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="take.eyebrow">What we realised</p>
+      <h2 id="take-title" data-i18n="take.title">The enquiry wasn't lost. It was in the wrong place.</h2>
+      <!-- Customer CEO approved this anonymised figure (2026-10-20). Re-check before changing the wording or adding detail, including the Malayalam in i18n.js. -->
+      <div class="proof">
+        <p class="eyebrow" id="proof-title" data-i18n="proof.eyebrow">From one customer's data</p>
+        <p class="proof-fig">~200 <span data-i18n="proof.unit">enquiries a month</span></p>
+        <p class="proof-text" data-i18n="proof.text">One customer tracks about 200 enquiries a month across a coordinator and six field staff.</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="paper" aria-labelledby="for-title">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="for.eyebrow">Who it's for</p>
+      <h2 id="for-title" data-i18n="for.title">For industries with decentralised teams.</h2>
+      <ul class="shapes">
+        <li><span data-i18n="solar">Solar</span><small data-i18n="solar.note">Enquiry, site visit, quote, install</small></li>
+        <li><span data-i18n="interiors">Interiors</span><small data-i18n="interiors.note">Enquiry, site measure, design, quote</small></li>
+        <li><span data-i18n="construction">Construction</span><small data-i18n="construction.note">Enquiry, site survey, estimate, contract</small></li>
+        <li><span data-i18n="similar">And similar field teams</span><small data-i18n="similar.note">Selling across many locations</small></li>
+      </ul>
+      <p class="eyebrow sub" data-i18n="setup.eyebrow">How it gets set up</p>
+      <ul class="shapes">
+        <li><span data-i18n="step1">01 Message us</span><small data-i18n="step1.note">Tell us how enquiries reach you and who calls back.</small></li>
+        <li><span data-i18n="step2">02 We set up your process</span><small data-i18n="step2.note">Your stages and questions. You check it first.</small></li>
+        <li><span data-i18n="step3">03 Your team starts</span><small data-i18n="step3.note">We add their numbers. Nothing to install.</small></li>
+      </ul>
+    </div>
+  </section>
 
-<!-- JS Plugins -->
+  <section class="paper" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
+      <h2 data-i18n="faq.title">Before you start</h2>
+      <details><summary data-i18n="q1">Does my team need a new app?</summary><p data-i18n="a1">No. Each person uses the WhatsApp they already have.</p></details>
+      <details><summary data-i18n="q2">Is this only for interiors?</summary><p data-i18n="a2">No. It fits any team that sells by enquiry. If yours doesn't fit, we'll say so.</p></details>
+      <details><summary data-i18n="q3">Can clients message us on this number?</summary><p data-i18n="a3">No. Tusker's number is for your staff only. Clients keep contacting you as they do now.</p></details>
+    </div>
+  </section>
 
-<script src="/plugins/jQuery/jquery.min.js"></script>
+  <section class="closing">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="close.eyebrow">Ready when you are</p>
+      <h2 data-i18n="close.title">Your team keeps the chat. You keep the record.</h2>
+      <a class="cta" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="cta">Set up on WhatsApp</a>
+    </div>
+  </section>
+</main>
 
-<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<footer data-i18n="footer">tusker. · Workflows that run in WhatsApp</footer>
 
-<script src="/plugins/slick/slick.min.js"></script>
-
-<!-- Main Script -->
-
-<script src="/js/script.min.js"></script>
-<!-- google analitycs -->
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', '', 'auto');
-  ga('send', 'pageview');
-</script></body>
+<script src="site-config.js"></script>
+<script src="domains/interiors.js"></script>
+<script src="domains/solar.js"></script>
+<script src="domain.js"></script>
+<script src="site.js" defer></script>
+<script src="story.js" defer></script>
+</body>
 </html>

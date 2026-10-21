@@ -135,6 +135,11 @@ html[lang="ml"] .hero h1 { max-width: 20ch; font-size: clamp(2.2rem, 5vw, 3.8rem
 .steps li.done { color: rgba(255,255,255,.8); }
 .steps li.done i { background: var(--accent); }
 .steps li.now { color: #fff; font-weight: 700; }
+/* Stages are buttons that jump to their scene (story.js). */
+.steps button, .flow ol button { all: unset; box-sizing: border-box; cursor: pointer; }
+.steps button { display: block; width: 100%; }
+.steps button:hover { color: #fff; }
+.steps button:focus-visible, .flow ol button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .stage-now { margin-top: .6rem; opacity: .7; }
 .empty { margin: auto; padding: 0 1rem; text-align: center; font-size: .75rem; color: #54656f; }
 @media (max-width: 860px) {
@@ -159,6 +164,8 @@ html[lang="ml"] .hero h1 { max-width: 20ch; font-size: clamp(2.2rem, 5vw, 3.8rem
   .steps { margin-top: .4rem; }
   .steps li { font-size: 0; line-height: 0; }
   .steps li i { margin-bottom: 0; }
+  /* The bar is thin; give each segment a finger-sized hit area. */
+  .steps button { padding: .6rem 0; margin: -.6rem 0; }
   .stage-now { margin-top: .35rem; opacity: .85; }
   .scenes { padding-bottom: 20vh; }
   .scenes .scene { min-height: 45vh; }
@@ -190,6 +197,9 @@ html[lang="ml"] .hero h1 { max-width: 20ch; font-size: clamp(2.2rem, 5vw, 3.8rem
   .flow ol li.done { color: rgba(255,255,255,.55); }
   .flow ol li.done::before { background: var(--accent); border-color: transparent; }
   .flow ol li.now { color: #fff; font-weight: 600; }
+  /* The whole row, circle included, is the button's hit area. */
+  .flow ol button::after { content: ""; position: absolute; inset: 0; }
+  .flow ol li:hover { color: rgba(255,255,255,.85); }
   .flow-card { position: absolute; z-index: 2; top: 0; left: 9rem; width: 11rem; padding: .5rem .75rem; background: #fff; color: var(--ink); border-left: 4px solid var(--accent); box-shadow: 0 12px 30px rgba(0,0,0,.4);
     transform: translateY(calc(var(--at, 0) * 2.75rem - 8px)); opacity: 0; transition: transform .7s cubic-bezier(.2,.8,.2,1), opacity .7s; }
   .flow-card.on { opacity: 1; }

@@ -26,12 +26,18 @@ document.querySelector('.scenes').replaceChildren(...story.scenes.map((s, i) => 
   el.append(n, h, p);
   return el;
 }));
-document.getElementById('steps').replaceChildren(...stageNames.map((name) => {
-  const li = document.createElement('li'); li.append(document.createElement('i'), name); return li;
-}));
-document.getElementById('flowStages').replaceChildren(...stageNames.map((name) => {
-  const li = document.createElement('li'); li.textContent = name; return li;
-}));
+// Each stage is a button that scrolls to the scene where the enquiry reaches it.
+const stageButton = (name, ...content) => {
+  const li = document.createElement('li');
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.dataset.stage = name;
+  b.append(...content);
+  li.append(b);
+  return li;
+};
+document.getElementById('steps').replaceChildren(...stageNames.map((name) => stageButton(name, document.createElement('i'), name)));
+document.getElementById('flowStages').replaceChildren(...stageNames.map((name) => stageButton(name, name)));
 document.querySelector('.flow-track').style.setProperty('--stages', stageNames.length);
 
 const chat = document.getElementById('chat');
@@ -153,6 +159,30 @@ function followHeadings() {
   scenes.forEach((s, i) => { if (s.querySelector('h3').getBoundingClientRect().bottom <= window.innerHeight) n = i; });
   if (n >= 0) show(n);
 }
+// Clicking a stage scrolls to the first scene that moves the enquiry there; the
+// scroll then plays the phone as if the reader had scrolled there themselves.
+// Wide screens put the scene in the middle band. Narrow ones put its number and
+// heading under the pinned phone, but keep the next heading below the screen,
+// since the scene shown is the last heading on screen.
+function goToScene(n) {
+  const heading = (i) => scenes[i].querySelector('h3').getBoundingClientRect();
+  let top;
+  if (narrow.matches) {
+    const pinnedBottom = 72 + document.querySelector('.phone-col').getBoundingClientRect().height;
+    top = window.scrollY + scenes[n].querySelector('.n').getBoundingClientRect().top - pinnedBottom - 16;
+    if (n + 1 < scenes.length) top = Math.min(top, window.scrollY + heading(n + 1).bottom - window.innerHeight + 8);
+  } else {
+    const r = scenes[n].getBoundingClientRect();
+    top = window.scrollY + r.top + r.height / 2 - window.innerHeight / 2;
+  }
+  window.scrollTo({ top: Math.max(0, Math.round(top)) });
+}
+const sceneOfStage = (name) => SCRIPT.findIndex((rows) => rows.some((r) => r[0] === 'stage' && r[1] === name));
+document.querySelectorAll('#steps, #flowStages').forEach((list) => list.addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-stage]');
+  if (b) goToScene(sceneOfStage(b.dataset.stage));
+}));
+
 let queued = false;
 window.addEventListener('scroll', () => {
   if (queued) return;

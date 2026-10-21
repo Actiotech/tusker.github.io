@@ -119,21 +119,32 @@ function add(row) {
   chat.append(el);
   while (chat.children.length > 14) chat.firstChild.remove();
 }
-// Scrolling back to an earlier scene replays the chat from the start up to it,
-// so the phone always matches the scene being read.
-function playTo(n) {
-  if (n === played) return;
-  if (n < played) reset();
-  for (let i = played + 1; i <= n; i++) (i === 0 ? SCRIPT[0].slice(PREVIEW) : SCRIPT[i]).forEach(add);
-  played = n;
+// Play the phone up to `rows` rows into scene n (the whole scene by default).
+// Going back, even within a scene, replays the chat from the start, so the
+// phone always matches the page. The opening preview is scene 1's first rows.
+let shown = 0;
+function playTo(n, rows = SCRIPT[n].length) {
+  if (n < played || (n === played && rows < shown)) reset();
+  if (played < 0) { played = 0; shown = PREVIEW; }
+  while (played < n) { SCRIPT[played].slice(shown).forEach(add); played++; shown = 0; }
+  SCRIPT[n].slice(shown, rows).forEach(add);
+  shown = Math.max(shown, rows);
 }
 const scenes = document.querySelectorAll('.scene');
 const narrow = window.matchMedia('(max-width: 860px)');
 
+// A clicked stage holds the phone at that stage's move, even when its scene
+// goes on to later stages, until the reader moves to another scene. While the
+// page glides to it, scenes passed on the way are skipped.
+let hold = null;
+let gliding = 0;
+
 // Make scene n the one being read: highlight it and play the phone up to it.
 function show(n) {
+  if (gliding && hold && n !== hold.scene) return;
+  if (hold && n !== hold.scene) hold = null;
   scenes.forEach((s, i) => s.classList.toggle('on', i === n));
-  playTo(n);
+  playTo(n, hold ? hold.rows : undefined);
 }
 
 // Wide screens: a scene counts once it crosses the band in the middle.
@@ -177,14 +188,27 @@ function goToScene(n) {
   }
   window.scrollTo({ top: Math.max(0, Math.round(top)) });
 }
-const sceneOfStage = (name) => SCRIPT.findIndex((rows) => rows.some((r) => r[0] === 'stage' && r[1] === name));
+const isMove = (name) => (r) => r[0] === 'stage' && r[1] === name;
+function goToStage(name) {
+  const n = SCRIPT.findIndex((rows) => rows.some(isMove(name)));
+  hold = { scene: n, rows: SCRIPT[n].findIndex(isMove(name)) + 1 };
+  show(n);
+  glide();
+  goToScene(n);
+}
+// The glide lasts until the page has stopped scrolling for a moment.
+function glide() {
+  clearTimeout(gliding);
+  gliding = setTimeout(() => { gliding = 0; }, 200);
+}
 document.querySelectorAll('#steps, #flowStages').forEach((list) => list.addEventListener('click', (e) => {
   const b = e.target.closest('button[data-stage]');
-  if (b) goToScene(sceneOfStage(b.dataset.stage));
+  if (b) goToStage(b.dataset.stage);
 }));
 
 let queued = false;
 window.addEventListener('scroll', () => {
+  if (gliding) glide();
   if (queued) return;
   queued = true;
   requestAnimationFrame(() => { queued = false; followHeadings(); });

@@ -1,0 +1,140 @@
+/* Refresh: a cleaner, more current look. Loads after theme.css and demo-polish.css.
+   Brand blue stays (it is in the logo) and the WhatsApp green stays on the CTAs;
+   what changes is the neutral base, the type scale, surfaces and contrast. */
+:root{--r-ink:#14151A;--r-mute:#5D6070;--r-line:#E6E3DC;--r-paper:#FAFAF8;--r-blue:#2864C5;--r-shadow:0 1px 2px #14151A0A,0 16px 40px #14151A0F}
+html{scroll-behavior:smooth}
+body{background:var(--r-paper);color:var(--r-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+/* Header: frosted, quiet, one clear action. */
+body .top{background:#FFFFFFCC;backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid #EEECE6}
+body .top nav a:not(.pill){color:var(--r-mute);font-weight:600;transition:color .2s}
+body .top nav a:not(.pill):hover{color:var(--r-ink)}
+body :is(.marketing-button,.hero-actions .cta,.top nav .pill){border-radius:999px;font-weight:700;box-shadow:0 8px 22px #25D36638;transition:transform .2s,box-shadow .2s,background .2s}
+body :is(.marketing-button,.hero-actions .cta,.top nav .pill):hover{transform:translateY(-1px);box-shadow:0 12px 28px #25D36647}
+
+/* Hero: bright, with a soft glow instead of a flat blue wash. */
+body .hero.owner-hero{background:radial-gradient(62% 60% at 88% -5%,#E2E8FF 0,transparent 70%),radial-gradient(48% 50% at -4% 100%,#E0F4EA 0,transparent 70%),#fff;border-bottom:1px solid #EEECE6;padding:76px 0 44px}
+body .hero.owner-hero h1{font-size:clamp(42px,5.2vw,68px);line-height:1.04;letter-spacing:-.045em;font-weight:800;color:var(--r-ink)}
+body .hero.owner-hero h1 span:last-child{background:linear-gradient(95deg,#2864C5 10%,#1E9B73 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+body .hero.owner-hero .lead{font-size:18px;line-height:1.65;color:var(--r-mute)}
+body .hero-audience{background:#fff;border:1px solid var(--r-line);color:#3a3d4a;box-shadow:0 1px 2px #14151A08;border-radius:999px}
+body .hero.owner-hero .link{color:var(--r-ink);font-weight:700}
+body .owner-hero-visual{border-radius:28px;border:1px solid #E9E6DF;background:#fff;box-shadow:0 2px 4px #14151A08,0 30px 70px #2840A022}
+body .hero-reassurance,body .owner-hero-bottom{color:var(--r-mute)}
+
+/* Sections alternate white and warm off-white so each one reads as its own block. */
+body .marketing{border-top:1px solid #EEECE6;padding-top:96px;padding-bottom:96px}
+body #compare,body #industries,body #pricing{background:#fff}
+body #features,body #get-started,body #faq{background:var(--r-paper)}
+body .marketing h2,body .section-heading h2{font-size:clamp(32px,3.8vw,50px);line-height:1.08;letter-spacing:-.04em;color:var(--r-ink)}
+body .marketing .eyebrow{color:var(--r-blue);letter-spacing:.14em;font-weight:800}
+body .section-heading>p,body .marketing .section-heading p{color:var(--r-mute);font-size:18px}
+
+/* Surfaces: defined edges, softer shadow, rounder corners. */
+body :is(.feature-panel,.pricing-card,.plan,.price-card,.industry-card,.setup-card,.faq-item,.comparison-table,.comparison-wrap){border-color:var(--r-line);border-radius:22px;box-shadow:var(--r-shadow)}
+body .feature-panel{padding:52px;border-radius:28px}
+
+body .marketing-footer{background:#fff;border-top:1px solid #EEECE6}
+
+/* Balanced line breaks, so a headline never ends on a lone word. */
+body .hero.owner-hero h1{font-size:clamp(40px,4.8vw,60px)}
+
+/* The Tusker column in the comparison reads as the highlighted one. */
+body .tusker-column{background:#F0F4FF}
+body thead .tusker-column,body th.tusker-column{background:#E3EAFF}
+
+/* Gradient text clips descenders unless the line box has room. */
+body .hero.owner-hero h1 span{display:block;padding-bottom:.1em}
+
+/* One accent: brand blue for every action. Green stays inside the WhatsApp chats and success ticks. */
+body :is(.marketing-button,.hero-actions .cta,.top nav .pill){background:#2864C5;color:#fff;border-color:#2864C5;box-shadow:0 8px 22px #2864C54D}
+body :is(.marketing-button,.hero-actions .cta,.top nav .pill):hover{background:#1C4DB5;border-color:#1C4DB5;color:#fff;box-shadow:0 12px 28px #2864C566}
+body .cta-play-icon{background:#fff;color:#2864C5}
+body .hero.owner-hero h1 span:last-child{background:none;color:#2864C5;-webkit-background-clip:border-box;background-clip:border-box}
+body .hero.owner-hero{background:radial-gradient(62% 60% at 88% -5%,#E2E8FF 0,transparent 70%),radial-gradient(48% 50% at -4% 100%,#F0EEE8 0,transparent 70%),#fff}
+
+/* Containers around the WhatsApp bubbles stay neutral; only the bubbles are green. */
+body .owner-visual-chat{background:#F5F5F2;border-color:#E6E3DC}
+body .owner-hero-action{background:#EEF2FF;border-color:#C9D3F6}
+body .owner-hero-action strong{color:#1D43A6}
+body :is(.visual-message.mine,.owner-question){background:#DDF5D6}
+
+/* Older, more specific rules still tint these sage; force a clean neutral. */
+body .owner-visual-chat,body .feature-visual{background:#F4F5F8!important;border-color:#E4E6EC!important}
+body .feature-visual .visual-bar{border-color:#E1E4EB;color:#3b3f4e}
+body .feature-copy li::before{color:#2864C5}
+body .visual-saved span{background:#E3EAFF;color:#1D43A6}
+
+/* "Start on WhatsApp" buttons keep WhatsApp green; every other action stays blue. */
+body .marketing-button[data-wa]:not([data-wa-message]){background:#25D366;border-color:#25D366;color:#073B2A;box-shadow:0 8px 22px #25D36640}
+body .marketing-button[data-wa]:not([data-wa-message]):hover{background:#1EBC5A;border-color:#1EBC5A;color:#073B2A;box-shadow:0 12px 28px #25D36652}
+
+/* Deeper WhatsApp green with white text, so it matches the weight of the blue buttons. */
+body .marketing-button[data-wa]:not([data-wa-message]){background:#17924A;border-color:#17924A;color:#fff;box-shadow:0 8px 22px #17924A4D}
+body .marketing-button[data-wa]:not([data-wa-message]):hover{background:#127A3D;border-color:#127A3D;color:#fff;box-shadow:0 12px 28px #17924A66}
+
+/* Hero: fewer, larger things. The tagline, flow strip, card eyebrow and repeat note are hidden
+   (they say what the headline, card heading and chat already say). Remove this block to restore them. */
+body .hero.owner-hero .hero-promise,
+body .hero.owner-hero .owner-hero-bottom>p,
+body .hero.owner-hero .owner-visual-heading>p,
+body .hero.owner-hero .owner-hero-action{display:none}
+body .hero.owner-hero .hero-audience{background:none;border:0;box-shadow:0 0 0;padding:0;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#2864C5}
+body .hero.owner-hero .lead{margin:22px 0 0;max-width:30em}
+body .hero.owner-hero .hero-actions{margin-top:30px}
+body .hero.owner-hero .hero-reassurance{margin-top:16px;font-size:14px}
+body .hero.owner-hero .owner-visual-heading h2{margin:0 0 18px;font-size:22px}
+body .hero.owner-hero .owner-hero-bottom{display:flex;justify-content:flex-start;margin-top:34px}
+body .hero.owner-hero .owner-hero-bottom .langs{margin:0}
+
+/* Trial strip: a contained card with a "14 days" badge, instead of a full-width bar. */
+body .trial-strip{max-width:960px;margin:56px auto 0;padding:28px 34px;grid-template-columns:auto 1fr auto;gap:30px;background:linear-gradient(115deg,#EBF0FF 0%,#F5F7FF 55%,#fff 100%);border:1px solid #D2DCFA;border-radius:26px;box-shadow:0 1px 2px #14151A08,0 18px 44px #2864C51A}
+body .trial-number{display:flex;flex-direction:column;align-items:center;justify-content:center;width:88px;height:88px;border-radius:50%;background:#fff;border:1px solid #D2DCFA;box-shadow:0 8px 20px #2864C51F;font:800 36px/1 Manrope,system-ui;letter-spacing:-.04em;color:#2864C5}
+body .trial-number span{display:block;margin-top:3px;font:700 11px/1 system-ui;letter-spacing:.08em;text-transform:uppercase;color:#5D6070}
+body .trial-strip h3{margin:0 0 6px;font-size:24px;line-height:1.2;letter-spacing:-.03em;color:#14151A}
+body .trial-strip p{margin:0;max-width:none;font-size:16px;line-height:1.6;color:#5D6070}
+@media(max-width:760px){body .trial-strip{grid-template-columns:auto 1fr;padding:22px 20px;gap:16px 18px;border-radius:22px}body .trial-strip .marketing-button{grid-column:1/-1;justify-content:center}body .trial-number{width:68px;height:68px;font-size:28px}body .trial-strip h3{font-size:20px}}
+
+/* Closing: flat and light like every other section. */
+body .marketing-closing{background:#fff;color:#14151A;border-top:1px solid #EEECE6;padding:96px 0}
+body .marketing-closing h2{color:#14151A}
+body .marketing-closing .eyebrow{color:#2864C5}
+body .marketing-closing>div>p:not(.eyebrow){color:#5D6070}
+body .marketing-closing .link,body .marketing-closing a:not(.marketing-button){color:#14151A}
+
+/* Trial strip: the same card as the pricing cards (white, thin border, 22px radius, light shadow). */
+body .trial-strip{background:#fff;border:1px solid #E6E3DC;border-radius:22px;box-shadow:0 1px 2px #14151A0A,0 16px 40px #14151A0F;padding:26px 32px}
+body .trial-number{display:block;width:auto;height:auto;background:none;border:0;border-radius:0;box-shadow:none;text-align:center;font:800 44px/1 Manrope,system-ui;letter-spacing:-.04em;color:#2864C5}
+body .trial-number span{margin-top:4px;font:700 12px/1 system-ui;letter-spacing:.08em;text-transform:uppercase;color:#5D6070}
+body .trial-strip h3{font-size:20px;letter-spacing:-.02em}
+body .trial-strip p{font-size:15px}
+@media(max-width:760px){body .trial-number{width:auto;height:auto;font-size:34px}}
+
+/* Closing: a flat soft tint (no gradient), so the ending is not stark white. */
+body .marketing-closing{background:#EEF2FF;border-top:1px solid #DCE4FB}
+body .trial-strip{max-width:800px;gap:26px;padding:24px 28px}
+
+/* One flat page colour; white cards and hairlines do the separating (no gradients, no colour switching). */
+:root{--canvas:#F6F6F3}
+body,body .marketing,body #compare,body #features,body #industries,body #get-started,body #pricing,body #faq,body .marketing-closing,body .hero.owner-hero{background:var(--canvas)}
+body .hero.owner-hero{border-bottom:0}
+body .marketing-footer{background:var(--canvas);border-top:1px solid #E8E6E0}
+
+/* Polish pass: cards are always white; one blue for the highlighted column; no stranded last words. */
+body .industry-grid>*,body .comparison-takeaway{background:#fff;border:1px solid #E6E3DC;border-radius:22px;box-shadow:0 1px 2px #14151A0A,0 16px 40px #14151A0F}
+body .comparison-takeaway{padding:26px 30px;margin-top:28px}
+body #compare .tusker-column{background:#EEF2FF!important}
+body #compare thead .tusker-column,body #compare th.tusker-column{background:#E3EAFF!important}
+body :is(.marketing,.flow-demo,.marketing-closing) .eyebrow{font-size:12px;letter-spacing:.14em;font-weight:800;color:#2864C5}
+
+
+/* Craft floor. Elevation is declared once (a hairline border, no extra shadow), card corners are 16px,
+   headline tracking stops at -0.03em, and the browser's own surfaces are themed. */
+body :is(.feature-panel,.price-card,.industry-grid>*,.comparison-takeaway,.trial-strip,.owner-hero-visual,#setup-options>*,#plan-options>*){box-shadow:none;border-radius:16px}
+body .feature-panel{padding:48px}
+body :is(.marketing-button,.hero-actions .cta,.top nav .pill),body .marketing-button[data-wa]:not([data-wa-message]),body :is(.marketing-button,.hero-actions .cta,.top nav .pill):hover,body .marketing-button[data-wa]:not([data-wa-message]):hover{box-shadow:none}
+body :is(h1,h2,h3,h4){letter-spacing:-.03em!important}
+::selection{background:#D6E0FF;color:#14151A}
+body :focus-visible{outline:2px solid #2864C5;outline-offset:3px}
+body :is(.plan-price,.comparison-table,table,.trial-number,.fd-prize,.fd-lt small){font-variant-numeric:tabular-nums}
+html{accent-color:#2864C5;scrollbar-color:#C9C7BF #F6F6F3}

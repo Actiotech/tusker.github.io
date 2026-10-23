@@ -3,147 +3,239 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tusker: enquiry and lead tracking in WhatsApp</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Baloo+Chettan+2:wght@500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<title>Tusker · Stop losing leads. Start closing deals.</title>
+<meta name="description" content="Keep every enquiry, team update and next step together on WhatsApp. Ask Tusker where your leads stand. Self-serve or managed setup for sales and field teams.">
+<link rel="icon" href="assets/logos/tusker.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="flow-demo.css?v=3">
+<link rel="stylesheet" href="tusker.css?v=44">
+<script>document.documentElement.classList.add('js')</script>
+<script src="analytics.js?v=1" defer></script>
 </head>
 <body>
-<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#">tusker<b>.</b></a>
-    <nav aria-label="Main">
-      <a class="nav-link" href="#story" data-i18n="nav.story">See it run</a>
-      <a class="nav-link" href="#faq" data-i18n="nav.faq">Questions</a>
-      <a class="pill" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="nav.start">Start on WhatsApp</a>
-      <details class="menu">
-        <summary aria-label="Menu" data-i18n-label="menu"><span></span></summary>
-        <div class="menu-panel">
-          <a href="#story" data-i18n="nav.story">See it run</a>
-          <a href="#faq" data-i18n="nav.faq">Questions</a>
-        </div>
-      </details>
-    </nav>
-  </div>
+<header class="bar" id="bar">
+  <a class="wordmark" href="#main" aria-label="Tusker home"><img src="assets/logos/tusker.svg" width="30" height="30" alt=""><span>tusker.</span></a>
+  <nav aria-label="Main"><a href="#compare">Compare</a><a href="#stages">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQs</a></nav>
+  <a class="btn" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa>Start on WhatsApp</a>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <svg class="tusker-bg" viewBox="44 56 332 378" fill="none" stroke="#5E5850" stroke-linejoin="miter" stroke-linecap="square" aria-hidden="true">
-      <g class="facets" stroke-width="0.6" opacity=".45"><path pathLength="1" d="M258 94L240 186" style="animation-delay:700ms"/><path pathLength="1" d="M214 74L172 262" style="animation-delay:790ms"/><path pathLength="1" d="M126 164L214 74" style="animation-delay:880ms"/><path pathLength="1" d="M126 164L172 262" style="animation-delay:970ms"/><path pathLength="1" d="M118 242L172 262" style="animation-delay:1060ms"/><path pathLength="1" d="M150 300L110 318" style="animation-delay:1150ms"/><path pathLength="1" d="M138 360L108 380" style="animation-delay:1240ms"/><path pathLength="1" d="M232 108L276 262" style="animation-delay:1330ms"/></g>
-      <g stroke-width="0.9">
-        <path pathLength="1" d="M170 92L214 74L258 94L302 98L362 146L356 224L318 268L276 262L204 266L172 262L150 300L138 360L142 396L160 404L150 420L122 414L108 380L110 318L118 242L126 164L146 116Z"/>
-        <path pathLength="1" d="M232 108L302 98L362 146L356 224L318 268L276 262L260 222L240 186Z" style="animation-delay:400ms"/>
-      </g>
-      <path class="eye" d="M150 174L159 169L168 174L159 179Z" fill="#5E5850" stroke="none"/>
-      <path class="tusk" d="M176 255L180 262L132 298L86 298L56 274L88 293L130 293Z" fill="#f84525" fill-opacity=".75" stroke="none"/>
-    </svg>
-    <div class="wrap">
-      <p class="eyebrow" data-i18n="hero.eyebrow">Sales and lead tracking</p>
-      <h1 data-i18n="hero.title">Know where every enquiry stands, in WhatsApp.</h1>
-      <p class="lead" data-i18n="hero.lead">Your team logs each enquiry and moves it on from the WhatsApp they already use. You see where every one stands without a phone call.</p>
-      <a class="cta" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="cta">Set up on WhatsApp</a><a class="link" href="#story" data-i18n="hero.watch">Watch an enquiry run</a>
-      <div class="langs" aria-label="Voice note languages" data-i18n-label="langs"><span>English</span><span lang="ml">മലയാളം</span><span>हिन्दी</span><span>தமிழ்</span><span>తెలుగు</span><span>ಕನ್ನಡ</span></div>
-    </div>
-  </section>
-
-  <section class="story" id="story">
-    <div class="wrap">
-      <!-- Filled in by story.js from the domain picked with ?d= (web/domains/). -->
-      <p class="eyebrow" id="storyEyebrow"></p>
-      <h2 id="storyTitle"></h2>
-      <p class="note" id="storyNote"></p>
-      <div class="story-grid">
-        <div class="scenes"></div>
-        <div class="phone-col">
-          <div class="phone"><div class="screen">
-            <div class="wa-head"><div class="avatar">T</div><div>Tusker<small id="whoLabel"></small></div></div>
-            <div class="chat" id="chat" aria-live="polite"></div>
-          </div></div>
-          <div class="board">
-            <b id="boardTitle"></b><span class="sep"> · </span><span id="boardCard"></span>
-            <ol class="steps" id="steps" aria-label="Enquiry stages"></ol>
-            <div class="stage-now" id="stageName" aria-live="polite"></div>
-          </div>
-          <div class="flow">
-            <p class="flow-title" id="flowTitle"></p>
-            <div class="flow-track">
-              <ol id="flowStages" aria-label="Enquiry stages"></ol>
-              <div class="flow-card" id="flowCard" aria-hidden="true">
-                <b id="flowCardTitle"></b>
-                <span id="flowClient"></span>
-                <p><i>🎙 <u id="flowVoice">0</u></i><i>🔔 <u id="flowBell">0</u></i></p>
-              </div>
-            </div>
-            <p class="flow-title">Notified</p>
-            <ul class="flow-notified" id="flowNotified"></ul>
-          </div>
-        </div>
+  <!-- Chapter: New. The owner's question, answered in one reply. -->
+  <section class="chapter hero" data-field="1" aria-labelledby="hero-title">
+    <div class="hero-text">
+      <h1 id="hero-title" class="reveal"><span>Stop losing leads.</span><span>Start closing deals.</span></h1>
+      <div class="hero-copy reveal">
+        <p class="lead">See where every lead stands with a message to Tusker on WhatsApp. Your team records the updates.</p>
+        <div class="actions"><a class="btn btn-lg" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa>Start on WhatsApp</a><a class="text-link demo-launch" href="#story" data-play-demo>Watch an enquiry become a deal</a></div>
+        <p class="small">No new app for your team. Voice notes in six languages.</p>
       </div>
     </div>
+      <figure class="owner reveal" aria-label="Tusker shows the owner which lead is waiting and tells her when a deal is won">
+        <img class="owner-img" src="assets/hero-owner.png?v=3" width="760" height="943" alt="A business owner at her showroom counter, celebrating a closed deal on her phone">
+        <div class="hcard hcard-lost" data-ui><span class="hcard-tag lost">Still new</span><p><b>Shaji · Villa kitchen</b>Call pending. Follow up today.</p></div>
+        <div class="hcard hcard-stages" data-ui aria-label="Leena's enquiry: won"><ol><li class="done">New</li><li class="done">Contacted</li><li class="done">Site measured</li><li class="done">Quote sent</li><li class="now">Won</li></ol></div>
+        <div class="hcard hcard-voice" data-ui><span class="vn-play" aria-hidden="true"></span><span class="vn-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><p><b>Vishnu · 0:06</b>Quote sent to Leena</p></div>
+        <div class="hcard hcard-won" data-ui><img src="assets/logos/whatsapp.svg" width="22" height="22" alt=""><p><b>ENQ-412 moved to won</b>Leena · 2BHK interiors · ₹6,80,000</p><span class="hcard-tag won">Won</span></div>
+      </figure>
   </section>
 
-  <section class="paper takeaway" aria-labelledby="take-title">
-    <div class="wrap">
-      <p class="eyebrow" data-i18n="take.eyebrow">What we realised</p>
-      <h2 id="take-title" data-i18n="take.title">The enquiry wasn't lost. It was in the wrong place.</h2>
-      <!-- Customer CEO approved this anonymised figure (2026-10-20). Re-check before changing the wording or adding detail, including the Malayalam in i18n.js. -->
-      <div class="proof">
-        <p class="eyebrow" id="proof-title" data-i18n="proof.eyebrow">From one customer's data</p>
-        <p class="proof-fig">~200 <span data-i18n="proof.unit">enquiries a month</span></p>
-        <p class="proof-text" data-i18n="proof.text">One customer tracks about 200 enquiries a month across a coordinator and six field staff.</p>
+  <!-- Chapter: the demo, on sand. -->
+  <section class="chapter flow-demo" id="story" data-field="3" aria-labelledby="storyTitle">
+    <div class="fd-head"><h2 id="storyTitle" class="reveal">Watch an enquiry become a deal.</h2>
+      <div class="fd-switch" aria-label="Choose an example"><a href="?d=interiors#story" data-trade="interiors">Interiors</a><a href="?d=solar#story" data-trade="solar">Solar</a></div>
+    </div>
+    <div class="fd-days" id="fdDays" aria-label="Days in the story"></div>
+    <div class="fd-stage fresh" id="fdStage" data-focus="phone" tabindex="0" aria-label="Demo: click or press Enter for the next step" data-ui>
+      <div class="fd-go"><div><button class="fd-play" id="fdStart" type="button"><i aria-hidden="true"></i>Start the story</button><p>Your team sends updates on WhatsApp.<br>Tusker keeps the record.</p></div></div>
+      <h3 class="fd-line" id="fdLine" role="status" aria-live="polite"></h3>
+      <p class="fd-sub" id="fdSub"></p>
+      <div class="fd-scene">
+        <div class="fd-surface fd-phone-s"><span class="fd-who" id="fdWho"></span><div class="fd-phone" id="fdPhone"><div class="fd-screen"><div class="fd-wa-head"><b>T</b><div>Tusker<small>Business account</small></div></div><div class="fd-chat" id="fdChat" role="log" aria-label="WhatsApp conversation"></div><div class="fd-compose" aria-hidden="true"><div>Message</div><b></b></div></div></div>
+          <div class="fd-cap"><img src="assets/logos/whatsapp.svg" alt="">On WhatsApp</div></div>
+        <div class="fd-link" aria-hidden="true"><span>sent to Tusker</span></div>
+        <div class="fd-surface fd-app-s"><div class="fd-app" id="fdApp"><div class="fd-bar" aria-hidden="true"><i></i><i></i><i></i><img src="assets/logos/tusker.svg" alt=""><div class="fd-nav"><span class="a">Enquiries</span><span>Team</span></div></div>
+          <div class="fd-body">
+            <div class="fd-lead empty" id="fdLead"><div class="fd-lt"><i id="fdIni"></i><div><h4 id="fdName"></h4><p id="fdProj"></p></div><small id="fdKey"></small></div>
+              <div class="fd-steps" id="fdSteps"><div class="fd-fill" id="fdFill"></div></div>
+              <div class="fd-nx"><small>Next step for your team</small><b id="fdNext"></b></div><div class="fd-prize"><span id="fdValue"></span><small>Project value</small></div></div>
+            <div class="fd-feed empty" id="fdFeed"><img src="assets/logos/whatsapp.svg" alt=""><div><b id="fdFeedB"></b><span id="fdFeedT"></span></div><time id="fdFeedTime"></time></div></div></div>
+          <div class="fd-cap"><img src="assets/logos/tusker.svg" alt="" style="width:auto;height:20px">The Tusker app</div></div>
       </div>
     </div>
+    <div class="fd-ctl"><button class="fd-btn" id="fdBack" type="button">← Back</button><button class="fd-play" id="fdPlay" type="button" data-state="ready" aria-pressed="false"><i aria-hidden="true"></i><span id="fdPlayL">Play</span></button><button class="fd-btn" id="fdFwd" type="button">Next →</button></div>
   </section>
 
-  <section class="paper" aria-labelledby="for-title">
-    <div class="wrap">
-      <p class="eyebrow" data-i18n="for.eyebrow">Who it's for</p>
-      <h2 id="for-title" data-i18n="for.title">For industries with decentralised teams.</h2>
-      <ul class="shapes">
-        <li><span data-i18n="solar">Solar</span><small data-i18n="solar.note">Enquiry, site visit, quote, install</small></li>
-        <li><span data-i18n="interiors">Interiors</span><small data-i18n="interiors.note">Enquiry, site measure, design, quote</small></li>
-        <li><span data-i18n="construction">Construction</span><small data-i18n="construction.note">Enquiry, site survey, estimate, contract</small></li>
-        <li><span data-i18n="similar">And similar field teams</span><small data-i18n="similar.note">Selling across many locations</small></li>
-      </ul>
-      <p class="eyebrow sub" data-i18n="setup.eyebrow">How it gets set up</p>
-      <ul class="shapes">
-        <li><span data-i18n="step1">01 Message us</span><small data-i18n="step1.note">Tell us how enquiries reach you and who calls back.</small></li>
-        <li><span data-i18n="step2">02 We set up your process</span><small data-i18n="step2.note">Your stages and questions. You check it first.</small></li>
-        <li><span data-i18n="step3">03 Your team starts</span><small data-i18n="step3.note">We add their numbers. Nothing to install.</small></li>
-      </ul>
+  <!-- Chapter: the stages as one bar. -->
+  <section class="chapter stages" id="stages" data-field="1" aria-labelledby="stages-title">
+    <h2 id="stages-title" class="reveal">Every enquiry has a story.</h2>
+    <p class="statement reveal">From the first callback to the latest quotation, give your office, field team and owner the same recorded picture.</p>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <h3>A message from the site. An update on the enquiry.</h3>
+        <p>Your staff can record an enquiry, add a note or change its stage through WhatsApp, as text or a voice note.</p>
+        <div class="feat-pic wa" data-ui><div class="wa-head"><b aria-hidden="true">T</b><span>Tusker<small>Business account</small></span></div><div class="wa-body"><div class="wm out"><p>Leena’s site measurement is done. Mark ENQ-412 site measured.</p><time>10:42 am <svg viewBox="0 0 16 11" aria-label="Read"><path d="M1 6l3 3 6-7M6 9l1 1 7-8"/></svg></time></div><div class="wm in"><p>Change ENQ-412 from contacted to site measured?</p><time>10:42 am</time><div class="wa-btns"><span>Confirm</span><span>Cancel</span></div></div><div class="wm out"><p>Confirm</p><time>10:43 am <svg viewBox="0 0 16 11" aria-label="Read"><path d="M1 6l3 3 6-7M6 9l1 1 7-8"/></svg></time></div><div class="wm in"><p>Site measured · update recorded</p><time>10:43 am</time></div></div></div>
+      </div>
+      <div class="feat reveal">
+        <h3>Get the position without a round of calls.</h3>
+        <p>Ask which enquiries are still new, check a customer’s stage or read the team’s latest notes.</p>
+        <div class="feat-pic wa" data-ui><div class="wa-head"><b aria-hidden="true">T</b><span>Tusker<small>Business account</small></span></div><div class="wa-body"><div class="wm out"><p>Which enquiries are still new?</p><time>5:02 pm <svg viewBox="0 0 16 11" aria-label="Read"><path d="M1 6l3 3 6-7M6 9l1 1 7-8"/></svg></time></div><div class="wm in"><p>These enquiries are still new:<br>1. ENQ-412 · Leena · 2BHK interiors<br>2. ENQ-409 · Shaji · Villa kitchen</p><time>5:02 pm</time></div></div></div>
+      </div>
+      <div class="feat reveal">
+        <h3>Pick up where the last person left off.</h3>
+        <p>Recorded notes, attachments and stage changes stay with the enquiry when work changes hands.</p>
+        <div class="feat-pic appcard" data-ui><div class="app-head"><img src="assets/logos/tusker.svg" width="22" height="22" alt=""><span>Tusker</span><em>Enquiries</em></div><div class="app-body"><p class="tl-head">ENQ-412 · Leena</p><ol class="timeline"><li><small>Monday · Anita</small><b>Enquiry recorded</b><span>2BHK interiors · customer details added</span></li><li><small>Tuesday · Vishnu</small><b>Site measured</b><span>Measurement completed and stage confirmed</span></li><li><small>Thursday · Vishnu</small><b>Quote sent</b><span>Quotation update recorded for the owner</span></li></ol></div></div>
+      </div>
+    </div>
+    <p class="small reveal">Your team handles calls, visits and quotations. Tusker keeps the updates they record together.</p>
+  </section>
+
+  <!-- Chapter: comparison. -->
+  <section class="chapter compare comparison-section" id="compare" data-field="2" aria-labelledby="comparison-title">
+    <h2 id="comparison-title" class="reveal">Updates everywhere?</h2>
+    <p class="statement reveal">A clear picture of every enquiry needs one record. A quick look at how each setup keeps enquiries on track.</p>
+    <div class="calc reveal" data-ui aria-label="Monthly cost for your team">
+      <div class="cell size"><label for="teamSize">Your team</label><div class="size-row"><input type="range" id="teamSize" min="1" max="40" step="1" value="15"><output id="teamOut" for="teamSize">15 people</output></div></div>
+      <div class="cell"><span>Tusker <span id="usPlan">Team</span> plan</span><strong id="usPrice">₹2,499</strong><small id="usNote">a month</small></div>
+      <div class="cell them"><span>Zoho CRM Standard</span><strong id="themPrice">₹19,500</strong><small>a month, ₹1,300 per user</small></div>
+      <div class="cell save"><span>You save</span><strong id="calcSave">₹17,001</strong><small id="saveNote">every month</small></div>
+    </div>
+    <fieldset class="comparison-picker">
+      <legend>Compare Tusker with</legend>
+      <div>
+        <label><input id="compare-groups" type="radio" name="comparison" value="groups" checked><span>WhatsApp groups</span></label>
+        <label><input id="compare-excel" type="radio" name="comparison" value="excel"><span>Excel</span></label>
+        <label><input id="compare-zoho" type="radio" name="comparison" value="zoho"><span>Zoho CRM</span></label>
+      </div>
+    </fieldset>
+    
+    <div class="table-wrap" id="comparison-grid">
+      <table class="comparison-table">
+        <caption class="sr-only">How each approach handles team updates, enquiry tracking and costs. On a phone, select an alternative above to compare it with Tusker.</caption>
+        <thead><tr><th scope="col"><span class="sr-only">What your team needs</span></th><th scope="col" class="tusker-column">Tusker</th><th scope="col" data-alternative="groups">WhatsApp groups</th><th scope="col" data-alternative="excel">Back office + Excel</th><th scope="col" data-alternative="zoho">Zoho CRM</th></tr></thead>
+        <tbody>
+<tr class="group"><th scope="rowgroup">What it does</th><td class="tusker-column"></td><td colspan="3"></td></tr>
+<tr><th scope="row">How staff update</th><td class="tusker-column">Text or voice</td><td data-alternative="groups">Group messages</td><td data-alternative="excel">Via back office</td><td data-alternative="zoho">CRM records</td></tr>
+<tr><th scope="row">One record per enquiry</th><td class="tusker-column"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td><td data-alternative="groups"><span class="mk no"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8"/></svg>Not built in</span></td><td data-alternative="excel"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td><td data-alternative="zoho"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td></tr>
+<tr><th scope="row">Person responsible</th><td class="tusker-column"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td><td data-alternative="groups">Mentions</td><td data-alternative="excel">Manual column</td><td data-alternative="zoho"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td></tr>
+<tr><th scope="row">Enquiry stages</th><td class="tusker-column"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td><td data-alternative="groups"><span class="mk no"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8"/></svg>Not built in</span></td><td data-alternative="excel">Manual column</td><td data-alternative="zoho"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td></tr>
+<tr><th scope="row">Notes &amp; files</th><td class="tusker-column"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td><td data-alternative="groups">Search chats</td><td data-alternative="excel">Links &amp; notes</td><td data-alternative="zoho"><span class="mk yes"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Yes</span></td></tr>
+<tr><th scope="row">Check progress</th><td class="tusker-column">Ask Tusker</td><td data-alternative="groups">Ask the group</td><td data-alternative="excel">Open the sheet</td><td data-alternative="zoho">CRM dashboard</td></tr>
+<tr class="group"><th scope="rowgroup">What it costs</th><td class="tusker-column"></td><td colspan="3"></td></tr>
+<tr><th scope="row">Priced per person?</th><td class="tusker-column">No · team price</td><td data-alternative="groups">No</td><td data-alternative="excel">Licences vary</td><td data-alternative="zoho">₹1,300/user/mo</td></tr>
+<tr class="cost-row"><th scope="row">15-person team / month</th><td class="tusker-column">₹2,499</td><td data-alternative="groups">No app fee</td><td data-alternative="excel">Licence + staff time</td><td data-alternative="zoho">₹19,500</td></tr>
+<tr><th scope="row">Setup charge</th><td class="tusker-column">₹0 self-serve<small>Managed: ₹4,999 once</small></td><td data-alternative="groups">Do it yourself</td><td data-alternative="excel">Do it yourself</td><td data-alternative="zoho">DIY or paid help</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="compare-foot">
+      <p class="small">15 people, monthly billing: Tusker Team vs <a href="https://www.zoho.com/crm/zohocrm-pricing.html" target="_blank" rel="noopener">Zoho CRM Standard</a>. Taxes extra. Zoho is ₹800/user/month when billed annually. Prices checked 22 Oct 2026. Plain groups and manual Excel setups shown. Extra tools can add capabilities. Zoho also supports WhatsApp integrations.</p>
+      <div class="takeaway reveal"><h3>Keep the group chat. Track enquiries with Tusker.</h3><p>Staff send updates directly to Tusker. It doesn’t automatically read your existing chats or groups.</p><a class="btn" href="#get-started">Find your setup</a></div>
     </div>
   </section>
 
-  <section class="paper" id="faq" style="padding-top:0">
-    <div class="wrap">
-      <p class="eyebrow" data-i18n="faq.eyebrow">Questions</p>
-      <h2 data-i18n="faq.title">Before you start</h2>
-      <details><summary data-i18n="q1">Does my team need a new app?</summary><p data-i18n="a1">No. Each person uses the WhatsApp they already have.</p></details>
-      <details><summary data-i18n="q2">Is this only for interiors?</summary><p data-i18n="a2">No. It fits any team that sells by enquiry. If yours doesn't fit, we'll say so.</p></details>
-      <details><summary data-i18n="q3">Can clients message us on this number?</summary><p data-i18n="a3">No. Tusker's number is for your staff only. Clients keep contacting you as they do now.</p></details>
-    </div>
+  <!-- Chapter: who it is for, as a poster. -->
+  <section class="chapter poster" id="industries" data-field="accent" aria-labelledby="fit-title">
+    <h2 id="fit-title" class="reveal">Built for how you sell.</h2>
+    <ul class="poster-list">
+      <li><a href="?d=interiors#story"><span class="pl-word">interiors</span><span class="pl-fact">“The home is measured. Has the quote gone out?” See the example</span></a></li>
+      <li><a href="?d=solar#story"><span class="pl-word">solar</span><span class="pl-fact">“The customer enquired. Who is visiting the roof?” See the example</span></a></li>
+      <li><a href="#get-started"><span class="pl-word">construction</span><span class="pl-fact">“The estimate is sent. Who is following up?” Find your setup</span></a></li>
+    </ul>
+    <p class="small reveal">For businesses where an enquiry moves through calls, site visits and quotations before it becomes an order.</p>
   </section>
 
-  <section class="closing">
-    <div class="wrap">
-      <p class="eyebrow" data-i18n="close.eyebrow">Ready when you are</p>
-      <h2 data-i18n="close.title">Your team keeps the chat. You keep the record.</h2>
-      <a class="cta" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa data-i18n="cta">Set up on WhatsApp</a>
+  <!-- Chapter: two ways to start. -->
+  <section class="chapter setup" id="get-started" data-field="3" aria-labelledby="setup-title">
+    <h2 id="setup-title" class="reveal">Start in minutes. Or with our help.</h2>
+    <p class="statement reveal">Set up a standard enquiry process yourself, or use our consulting experience to simplify how your team works.</p>
+    <div class="setup-grid" id="setup-options">
+      <article class="setup-card reveal">
+        <h3>Self-serve</h3><p class="promise">Up and running in 15 minutes.</p>
+        <p>Message Tusker on WhatsApp, describe your business and review your enquiry stages. Start recording leads with one standard process.</p>
+        <ul><li>No developers needed</li><li>No complex integrations</li><li>Guided setup through WhatsApp</li></ul>
+        <p class="cost"><b>₹0 setup charge</b> Your chosen monthly plan applies.</p>
+        <div class="actions"><a class="btn" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa>Start on WhatsApp</a><a class="text-link" href="#pricing" data-choose-setup="self">See monthly plans</a></div>
+      </article>
+      <article class="setup-card managed reveal">
+        <h3>Managed setup</h3><p class="promise">Consulting and setup, built around your business.</p>
+        <p>Use our consulting experience to simplify how your team handles enquiries. We help you define clear stages and responsibilities, then configure Tusker around your process.</p>
+        <ul><li>Review and simplify your enquiry process</li><li>Team onboarding and one training session</li><li>One round of setup adjustments</li></ul>
+        <p class="cost"><b>From ₹2,999 once</b> Plus your chosen monthly plan. Team setup is ₹4,999.</p>
+        <div class="actions"><a class="btn" href="#pricing" data-choose-setup="managed">See managed pricing</a><a class="text-link" href="https://wa.me/919446014972?text=Managed%20setup" target="_blank" rel="noopener" data-wa data-wa-message="Managed setup">Discuss your process</a></div>
+      </article>
     </div>
+    <p class="small">Self-serve timing applies to one standard enquiry process. Managed setup covers one enquiry process; additional processes, data migration and integrations are scoped and quoted separately.</p>
+  </section>
+
+  <!-- Chapter: plans that step up. -->
+  <section class="chapter pricing" id="pricing" data-field="1" aria-labelledby="pricing-title">
+    <div class="pricing-top">
+      <div><h2 id="pricing-title" class="reveal">One team price, paid monthly.</h2>
+        <p class="statement reveal">Enquiries, text and voice updates, and owner notifications on every plan. Team limits include the owner.</p></div>
+      <fieldset class="setup-switch"><legend>How would you like to set up?</legend><div><label><input type="radio" name="setupMode" value="self" checked><span>Self-serve</span></label><label><input type="radio" name="setupMode" value="managed"><span>Managed setup</span></label></div><p id="setupSummary" aria-live="polite">Choose Starter or Team. No setup charge.</p></fieldset>
+    </div>
+    <div class="pricing-grid" id="plan-options" data-setup="self">
+      <article class="price-card" data-plan="Starter" data-monthly="1499" data-managed="2999" style="--c:#fff;--h:420px">
+        <h3>Starter</h3><p class="plan-price"><strong>₹1,499</strong> / month</p><p>For the owner and a small team.</p>
+        <ul><li>Up to 5 people, including you</li><li>One standard enquiry process</li><li>WhatsApp text and voice updates</li><li>Enquiry notes and owner updates</li></ul>
+        <p class="plan-setup"><span class="setup-fee-label">Self-serve setup</span> <strong class="setup-fee">₹0</strong><br>First month <strong class="first-month-total">₹1,499</strong></p>
+        <a class="plan-cta" href="https://wa.me/919446014972?text=Start%20Starter" target="_blank" rel="noopener" data-wa data-wa-message="Start Starter">Choose Starter</a>
+      </article>
+      <article class="price-card featured-plan" data-plan="Team" data-monthly="2499" data-managed="4999" style="--c:var(--ink);--h:500px">
+        <h3>Team</h3><p class="plan-price"><strong>₹2,499</strong> / month</p><p>For an office and field team. Our recommended plan.</p>
+        <ul><li>Up to 15 people, including you</li><li>One enquiry process for your business</li><li>WhatsApp text and voice updates</li><li>Enquiry notes and owner updates</li></ul>
+        <p class="plan-setup"><span class="setup-fee-label">Self-serve setup</span> <strong class="setup-fee">₹0</strong><br>First month <strong class="first-month-total">₹2,499</strong></p>
+        <a class="plan-cta" href="https://wa.me/919446014972?text=Start%20Team" target="_blank" rel="noopener" data-wa data-wa-message="Start Team">Choose Team</a>
+      </article>
+      <article class="price-card" data-plan="Custom" data-monthly="4999" data-managed="14999" style="--c:#fff;--h:580px" hidden>
+        <h3>Custom</h3><p class="plan-price">From <strong>₹4,999</strong> / month</p><p>Managed setup for a more involved rollout.</p>
+        <ul><li>Larger teams and multiple processes</li><li>Team size and scope agreed together</li><li>WhatsApp text and voice updates</li><li>A rollout plan around your business</li></ul>
+        <p class="plan-setup"><span class="setup-fee-label">Self-serve setup</span> <strong class="setup-fee">₹0</strong><br>First month from <strong class="first-month-total">₹4,999</strong></p>
+        <a class="plan-cta" href="https://wa.me/919446014972?text=Custom%20setup" target="_blank" rel="noopener" data-wa data-wa-message="Custom setup">Discuss my team</a>
+      </article>
+      <article class="trial-card">
+        <h3>14 days free</h3><p>Try it with a small team first. One standard process, up to 5 people. Check the fit before a full rollout or paid managed setup.</p>
+        <a class="btn" href="https://wa.me/919446014972?text=Start%20trial" target="_blank" rel="noopener" data-wa data-wa-message="Start trial">Start a trial</a>
+      </article>
+    </div>
+    <p class="small">Monthly billing. Starter and Team are available with self-serve or managed setup. Custom is available only with managed setup. Managed setup has a one-time charge. Prices exclude applicable taxes. Text and voice use is included for the agreed rollout. High-volume use, extra processes and integrations are quoted before you commit.</p>
+  </section>
+
+  <!-- Chapter: a band per question, every answer visible. -->
+  <section class="chapter faq" id="faq" aria-labelledby="faq-title">
+    <div class="faq-head" data-field="accent"><h2 id="faq-title">Questions before you start?</h2><a class="text-link" href="https://wa.me/919446014972?text=Tusker%20questions" target="_blank" rel="noopener" data-wa data-wa-message="Tusker questions">Ask a question on WhatsApp</a></div>
+    <div class="faq-list"><div class="faq-tabs" role="tablist" aria-label="Frequently asked question topics"><button type="button" role="tab" id="faq-tab-start" aria-controls="faq-panel-start" aria-selected="true" tabindex="0">Getting started</button><button type="button" role="tab" id="faq-tab-daily" aria-controls="faq-panel-daily" aria-selected="false" tabindex="-1">Using Tusker</button><button type="button" role="tab" id="faq-tab-plans" aria-controls="faq-panel-plans" aria-selected="false" tabindex="-1">Plans &amp; setup</button></div><div role="tabpanel" id="faq-panel-start" aria-labelledby="faq-tab-start"><details open><summary>Will my team need another app?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>No. Your staff message Tusker using the WhatsApp they already have. They can record enquiries, add notes and update progress there.</p></div></details><details><summary>Can Tusker follow our own sales process?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>The stages and information collected can be configured around your process. For example: new enquiry, contacted, site visited, quote sent and won. You review the setup before your team starts. More involved processes can be scoped through managed setup.</p></div></details></div><div role="tabpanel" id="faq-panel-daily" aria-labelledby="faq-tab-daily" hidden><details><summary>Can my team use voice notes?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>Yes. They can speak an enquiry, note or update into WhatsApp. Tusker asks for required details and confirmation before saving a change.</p></div></details><details><summary>Will Tusker automatically collect all our enquiries?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>In the setup shown here, your team records enquiries by messaging Tusker. It asks for the details needed to create the record. Updates go into the same enquiry as work moves forward.</p></div></details><details><summary>What can I see as the business owner?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>You can ask which enquiries are still new, check the stage of an enquiry and read the team’s notes. WhatsApp notifications can be configured for important updates, such as a site visit completed or a quote sent.</p></div></details><details><summary>Will Tusker call customers or send quotations for us?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>Your team handles customer conversations, visits and quotations. Tusker keeps their updates together so you can see what needs attention. Customers continue contacting your business as they do today; Tusker’s number is for your staff.</p></div></details><details><summary>Does Tusker read our other WhatsApp chats?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>Tusker works with the messages your team sends to its WhatsApp number. Your staff record the enquiries and updates they want to track there. Your other customer conversations continue as usual.</p></div></details></div><div role="tabpanel" id="faq-panel-plans" aria-labelledby="faq-tab-plans" hidden><details><summary>What is the difference between self-serve and managed setup?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>With self-serve, get up and running in 15 minutes with one standard enquiry process. Tusker guides you on WhatsApp. No developers needed, no complex integrations and no setup charge. Available on Starter and Team.</p><p>With managed setup, use our consulting experience to review and simplify your enquiry process. We configure the agreed stages and owner updates, help onboard your team, and include one training session and one round of adjustments. A one-time setup fee applies alongside your monthly plan.</p></div></details><details><summary>How much will Tusker cost my business?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>Starter is ₹1,499 a month for up to 5 people. Team is ₹2,499 a month for up to 15 people. Custom is available only with managed setup and starts at ₹4,999 a month. The owner counts as a team member.</p><p>Starter and Team have no setup charge when you choose self-serve. Optional managed setup is ₹2,999 for Starter and ₹4,999 for Team. Custom requires managed setup, starting at ₹14,999 once. Applicable taxes are extra. <a href="#pricing">Compare the plans and first-month totals.</a></p></div></details><details><summary>Can we try it before a full rollout?<span class="faq-indicator" aria-hidden="true"></span></summary><div><p>Yes. Start with a 14-day trial of one standard process for up to 5 people. Use it to check how your team records enquiries and updates. Choose a paid plan and any managed setup once you are ready to roll it out.</p></div></details></div></div>
+  </section>
+
+  <!-- Chapter: the sentence whose last word is the button. -->
+  <section class="chapter cta" data-field="1" aria-labelledby="closing-title">
+    <h2 id="closing-title" class="reveal">See how Tusker fits your business.</h2>
+    <p class="statement reveal">Set up through WhatsApp or get a hand from our team. Start small. Keep the next follow-up in sight.</p>
+    <div class="actions reveal"><a class="btn btn-lg" href="https://wa.me/919446014972?text=Set%20up%20Tusker" target="_blank" rel="noopener" data-wa>Start on WhatsApp</a><a class="text-link" href="#get-started">Help me get set up</a></div>
   </section>
 </main>
 
-<footer data-i18n="footer">tusker. · Workflows that run in WhatsApp</footer>
+<footer class="foot" data-field="ink">
+  <p class="foot-name" aria-hidden="true">tusker.</p>
+  <div class="foot-row">
+    <div class="places"><a href="https://wa.me/919446014972?text=Tusker%20questions" target="_blank" rel="noopener" data-wa data-wa-message="Tusker questions">Message us on WhatsApp</a><p>Customer enquiries and team updates, on WhatsApp.</p></div>
+    <nav aria-label="Footer"><a href="#get-started">Ways to set up</a><a href="#pricing">Pricing</a><a href="#compare">Compare</a><a href="#faq">FAQs</a><a href="#story">Watch the demo</a></nav>
+  </div>
+  <div class="foot-legal"><span>© 2026 Tusker. Illustration generated for Tusker in Figma.</span><a href="#main">Back to top</a></div>
+</footer>
 
 <script src="site-config.js"></script>
 <script src="domains/interiors.js"></script>
 <script src="domains/solar.js"></script>
 <script src="domain.js"></script>
 <script src="site.js" defer></script>
-<script src="story.js" defer></script>
+<script src="marketing.js?v=2" defer></script>
+<script src="flow-model.js?v=1"></script>
+<script src="flow-demo.js?v=1" defer></script>
+<script src="tusker.js?v=8" defer></script>
 </body>
 </html>
